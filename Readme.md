@@ -32,8 +32,11 @@ Choose any valid version  !
 ### Mapping Different Source and Target Fields
 Often, model and DTO won't have the same field names. For our case, FullName field in the Employee class corresponds to firstName field in EmployeeDto class.
 There can be slight variations due to team members assigning their own renditions, and how you'd like to pack the info for the service that called for the DTO.
-MapStruct provides support to handle these situations via the @Mapping annotation.
+MapStruct provides support to handle these situations via the @Mapping annotation. <br/>
 Now, we'll have to let our EmployeeMapper know of this discrepancy. We'll do so by setting the source and target flags of the @Mapping annotation.
 ```
 @Mapping(source = "emp.fullName", target="firstName")
 ```
+
+### Inverse Mapping 
+`InheritInverseConfiguration` advises the code generator to apply all the Mappings from an inverse mapping method to the annotated method as well. An inverse mapping method is a method which has the annotated method's source type as target type (return type or indicated through a parameter annotated with MappingTarget) and the annotated method's target type as source type.

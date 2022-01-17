@@ -6,6 +6,6 @@ import lombok.Data;
 public class EmployeeDto {
 
     private int id;
-    private String firstName;
+    private String fullName;
     private String jobRole;
 }

@@ -6,6 +6,7 @@ import com.example.mapstruct.models.Employee;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.springframework.stereotype.Component;
 
 @Mapper
 public interface EmployeeMapper {

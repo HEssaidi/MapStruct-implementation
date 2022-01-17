@@ -1,5 +1,6 @@
 package com.example.mapstruct.service;
 
+import com.example.mapstruct.mapper.EmployeeMapper;
 import com.example.mapstruct.models.Employee;
 import com.example.mapstruct.repo.EmployeeRepo;
 import org.springframework.beans.factory.annotation.Autowired;

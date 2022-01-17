@@ -18,6 +18,12 @@ Should add 2 dependencies <br/>
 if the red line on the constructor bothers you can add an empty constructor
 You can add componentModel in the @Mapper annotation on the interface / abstract class.
 `(componentModel = "spring")` <br/>
-
+Following these instructions, class attributes are not mapped; for that we should add : <br/>
+`<dependency>
+<groupId>org.projectlombok</groupId>
+<artifactId>lombok-mapstruct-binding</artifactId>
+<version>0.2.0</version>
+</dependency>` <br/>
+Choose any version valid !
 
 @Mapping annotation, will use it to add the target and source attribute.

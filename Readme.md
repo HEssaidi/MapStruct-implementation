@@ -39,4 +39,7 @@ Now, we'll have to let our EmployeeMapper know of this discrepancy. We'll do so 
 ```
 
 ### Inverse Mapping 
-`InheritInverseConfiguration` advises the code generator to apply all the Mappings from an inverse mapping method to the annotated method as well. An inverse mapping method is a method which has the annotated method's source type as target type (return type or indicated through a parameter annotated with MappingTarget) and the annotated method's target type as source type.
+`InheritInverseConfiguration` advises the code generator to apply all the Mappings from an inverse mapping method to the annotated method as well. 
+An inverse mapping method is a method which has the annotated method's source type as target type (return type or indicated through a parameter annotated with MappingTarget) and the annotated method's target type as source type.  <br/>
+Compile your project, if you get mapping processor errors, you can update `mapstruct` version
+[https://stackoverflow.com/questions/65112406/intellij-idea-mapstruct-java-internal-error-in-the-mapping-processor-java-lang](mapstruct-java-version-solution)

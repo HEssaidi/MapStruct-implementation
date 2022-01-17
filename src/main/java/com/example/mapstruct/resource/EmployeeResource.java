@@ -1,5 +1,7 @@
 package com.example.mapstruct.resource;
 
+import com.example.mapstruct.dto.EmployeeDto;
+import com.example.mapstruct.mapper.EmployeeMapper;
 import com.example.mapstruct.models.Employee;
 import com.example.mapstruct.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +16,12 @@ public class EmployeeResource {
 
     @Autowired
     private EmployeeService employeeService;
+    @Autowired
+    private EmployeeMapper employeeMapper;
 
     @PostMapping("/")
-    public Employee saveEmpl(@RequestBody Employee employee){
+    public Employee saveEmpl(@RequestBody EmployeeDto employeeDto){
+        Employee employee = employeeMapper.fromDto(employeeDto);
         return employeeService.saveEmployee(employee);
     }
 }

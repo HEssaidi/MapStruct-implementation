@@ -15,7 +15,7 @@ public class EmployeeMapperConverter implements EmployeeMapper {
 
         EmployeeDto employeeDto = new EmployeeDto();
 
-        employeeDto.setFullName( emp.getFirstName() );
+        employeeDto.setFullName( toFullName( emp ) );
         if ( emp.getId() != null ) {
             employeeDto.setId( emp.getId().intValue() );
         }

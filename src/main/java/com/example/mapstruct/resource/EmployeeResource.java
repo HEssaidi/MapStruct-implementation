@@ -24,4 +24,10 @@ public class EmployeeResource {
         Employee employee = employeeMapperConverter.fromDto(employeeDto);
         return employeeService.saveEmployee(employee);
     }
+    @PostMapping("/dto")
+    public EmployeeDto toEmplDto(@RequestBody Employee employee){
+        final EmployeeDto employeeDto = employeeMapperConverter.toDto(employee);
+        System.out.println(employeeDto);
+        return employeeDto;
+    }
 }

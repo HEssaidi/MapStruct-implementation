@@ -43,3 +43,7 @@ Now, we'll have to let our EmployeeMapper know of this discrepancy. We'll do so 
 An inverse mapping method is a method which has the annotated method's source type as target type (return type or indicated through a parameter annotated with MappingTarget) and the annotated method's target type as source type.  <br/>
 Compile your project, if you get mapping processor errors, you can update `mapstruct` version. <br/>
 [https://stackoverflow.com/questions/65112406/intellij-idea-mapstruct-java-internal-error-in-the-mapping-processor-java-lang](mapstruct-java-version-solution)
+
+### Named annotation
+Marks mapping methods with the given qualifier name `qualifiedByName = "translateToFullName"`. <br/>
+Can be used to qualify a single method or all methods of a given type by specifying this annotation on the type level.
